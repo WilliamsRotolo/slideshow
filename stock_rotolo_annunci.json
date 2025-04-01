@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Fiat 500 Hybrid",
+    "price": "€15.900",
+    "km": "35.000 km",
+    "year": "2022",
+    "image_url": "https://graphics.gestionaleauto.com/gonline_graphics/22143057_O_67e512ee0f8d3.jpg",
+    "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita/22143057/"
+  },
+  {
+    "title": "Alfa Romeo Tonale",
+    "price": "€29.900",
+    "km": "12.000 km",
+    "year": "2023",
+    "image_url": "https://graphics.gestionaleauto.com/gonline_graphics/21226246_O_180f353225ada.jpg",
+    "link": "https://www.rotoloauto.com/scheda-alfa-romeo-tonale-1-5-130-cv-speciale-senza-finanziamento/21226246/"
+  },
+  {
+    "title": "BMW Serie 3 Touring",
+    "price": "€32.700",
+    "km": "18.000 km",
+    "year": "2023",
+    "image_url": "https://graphics.gestionaleauto.com/gonline_graphics/21120731_O_3c3aaae7d86d1.jpg",
+    "link": "https://www.rotoloauto.com/scheda-bmw-320-d-xdrive-touring-sport-senza-finanziamento/21120731/"
+  }
+]
