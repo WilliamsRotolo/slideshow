@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Rotolo Automobili - Live</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .slide {
+      display: none;
+      text-align: center;
+      padding: 20px;
+    }
+    .slide img.car {
+      max-width: 60%;
+      max-height: 50vh;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .slide h1 {
+      font-size: 2em;
+      color: #b30000;
+    }
+    .slide p.price {
+      font-size: 2em;
+      color: #b30000;
+      font-weight: bold;
+    }
+    .slide p.details {
+      font-size: 1.2em;
+    }
+    .slide img.qr {
+      width: 150px;
+      height: 150px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="slides"></div>
+
+  <script>
+    const container = document.getElementById("slides");
+    let current = 0;
+
+    async function fetchSlides() {
+      try {
+        const response = await fetch("https://raw.githubusercontent.com/WilliamsRotolo/slideshow/main/stock_rotolo_annunci.json");
+        const data = await response.json();
+
+        for (const car of data) {
+          const slide = document.createElement("div");
+          slide.className = "slide";
+          slide.innerHTML = `
+            <img class="car" src="${car.image_url}" alt="${car.title}">
+            <h1>${car.title}</h1>
+            <p class="price">${car.price}</p>
+            <p class="details">${car.km} • ${car.year}</p>
+            <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(car.link)}" alt="QR Code">
+          `;
+          container.appendChild(slide);
+        }
+
+        startSlideshow();
+      } catch (error) {
+        container.innerHTML = '<p style="color:red; font-size:1.5em;">Errore nel caricamento degli annunci.</p>';
+        console.error("Errore fetch JSON:", error);
+      }
+    }
+
+    function startSlideshow() {
+      const slides = document.querySelectorAll(".slide");
+      if (slides.length === 0) return;
+      slides[0].style.display = "block";
+
+      setInterval(() => {
+        slides[current].style.display = "none";
+        current = (current + 1) % slides.length;
+        slides[current].style.display = "block";
+      }, 10000);
+    }
+
+    fetchSlides();
+  </script>
+</body>
+</html>
