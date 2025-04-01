@@ -10,39 +10,48 @@
       font-family: Arial, sans-serif;
       background-color: #f9f9f9;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
     .slide {
       display: none;
-      text-align: center;
-      padding: 20px;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
     }
     .slide img.car {
-      max-width: 60%;
-      max-height: 50vh;
+      width: 100vw;
+      height: 100vh;
       object-fit: cover;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
-    .slide h1 {
-      font-size: 2em;
+    .info-bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .info-bar h1 {
+      font-size: 2.2em;
       color: #b30000;
+      margin: 0;
     }
-    .slide p.price {
+    .info-bar p.price {
       font-size: 2em;
       color: #b30000;
       font-weight: bold;
+      margin: 5px 0;
     }
-    .slide p.details {
+    .info-bar p.details {
       font-size: 1.2em;
+      color: #333;
+      margin: 5px 0;
     }
     .slide img.qr {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
       width: 150px;
       height: 150px;
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -63,9 +72,11 @@
           slide.className = "slide";
           slide.innerHTML = `
             <img class="car" src="${car.image_url}" alt="${car.title}">
-            <h1>${car.title}</h1>
-            <p class="price">${car.price}</p>
-            <p class="details">${car.km} • ${car.year}</p>
+            <div class="info-bar">
+              <h1>${car.title}</h1>
+              <p class="price">${car.price}</p>
+              <p class="details">${car.km} • ${car.year}</p>
+            </div>
             <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(car.link)}" alt="QR Code">
           `;
           container.appendChild(slide);
@@ -73,7 +84,7 @@
 
         startSlideshow();
       } catch (error) {
-        container.innerHTML = '<p style="color:red; font-size:1.5em;">Errore nel caricamento degli annunci.</p>';
+        container.innerHTML = '<p style="color:red; font-size:1.5em; text-align:center; padding-top:2em;">Errore nel caricamento degli annunci.</p>';
         console.error("Errore fetch JSON:", error);
       }
     }
