@@ -1,78 +1,23 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Slideshow Auto</title>
-    <style>
-        /* Stili per lo slideshow */
-        #slideshow-container {
-            position: relative;
-            max-width: 800px;
-            margin: auto;
-        }
-        .slide {
-            display: none;
-        }
-        img {
-            width: 100%;
-        }
-        .description {
-            text-align: center;
-            padding: 15px;
-        }
-    </style>
-</head>
-<body>
-    <div id="slideshow-container">
-        <!-- Le slide verranno generate dinamicamente qui -->
-    </div>
-
-    <script>
-        // Carica il file JSON
-        fetch('annunci_auto.json')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('slideshow-container');
-
-                data.forEach((auto, index) => {
-                    // Crea il contenitore della slide
-                    const slideDiv = document.createElement('div');
-                    slideDiv.classList.add('slide');
-
-                    // Crea l'immagine
-                    const img = document.createElement('img');
-                    img.src = auto.image_url;
-                    img.alt = auto.title;
-
-                    // Crea la descrizione
-                    const descDiv = document.createElement('div');
-                    descDiv.classList.add('description');
-                    descDiv.innerHTML = `<h2>${auto.title}</h2><p>Prezzo: ${auto.price}</p><p>Anno: ${auto.year} | Km: ${auto.km}</p>`;
-
-                    // Aggiunge immagine e descrizione alla slide
-                    slideDiv.appendChild(img);
-                    slideDiv.appendChild(descDiv);
-
-                    // Aggiunge la slide al container
-                    container.appendChild(slideDiv);
-                });
-
-                // Mostra la prima slide
-                let currentSlide = 0;
-                const slides = document.querySelectorAll('.slide');
-                slides[currentSlide].style.display = 'block';
-
-                // Funzione per mostrare la slide successiva
-                function showNextSlide() {
-                    slides[currentSlide].style.display = 'none';
-                    currentSlide = (currentSlide + 1) % slides.length;
-                    slides[currentSlide].style.display = 'block';
-                }
-
-                // Cambia slide ogni 5 secondi
-                setInterval(showNextSlide, 5000);
-            })
-            .catch(error => console.error('Errore nel caricamento del JSON:', error));
-    </script>
-</body>
-</html>
+[
+    {
+        "title": "Fiat 500",
+        "price": "€10.000",
+        "year": "2018",
+        "km": "30.000",
+        "image_url": "https://www.rotoloauto.com/images/fiat500.jpg"
+    },
+    {
+        "title": "Volkswagen Golf",
+        "price": "€15.000",
+        "year": "2017",
+        "km": "40.000",
+        "image_url": "https://www.rotoloauto.com/images/vwgolf.jpg"
+    },
+    {
+        "title": "Renault Clio",
+        "price": "€12.000",
+        "year": "2019",
+        "km": "25.000",
+        "image_url": "https://www.rotoloauto.com/images/renaultclio.jpg"
+    }
+]
