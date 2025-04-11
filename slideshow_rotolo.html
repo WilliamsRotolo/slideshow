@@ -9,7 +9,7 @@
       margin: 0;
       background-color: #fff;
       font-family: sans-serif;
-      overflow: hidden;
+      overflow-y: auto;
     }
 
     .slide {
@@ -35,7 +35,9 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding-top: 20px;
+      padding-top: 0;
+      position: relative;
+      z-index: 0;
     }
 
     .image-container img {
@@ -53,3 +55,101 @@
       padding: 20px 40px;
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .info-box h1 {
+      font-size: 3.2vw;
+      margin: 0;
+      color: #cc0000;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .info-box .prezzo {
+      font-size: 3.8vw;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .info-box .sottotitolo {
+      font-size: 2.3vw;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .qr {
+      margin-top: 15px;
+    }
+
+    .qr img {
+      width: 156px;
+      height: 156px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slideshow"></div>
+
+<script>
+const SLIDE_DURATION = 10000;
+
+let data = [];
+let currentIndex = 0;
+
+fetch('stock_rotolo_annunci.json')
+  .then(res => res.json())
+  .then(json => {
+    data = json;
+    createSlides();
+    startSlideshow();
+  });
+
+function createSlides() {
+  const container = document.getElementById('slideshow');
+  data.forEach((item, index) => {
+    const slide = document.createElement('div');
+    slide.className = 'slide';
+
+    slide.innerHTML = `
+      <div class="image-container">
+        <img src="${item.immagine}" alt="Auto">
+      </div>
+      <div class="info-box">
+        <h1>${item.titolo}</h1>
+        <div class="prezzo">${item.prezzo}</div>
+        <div class="sottotitolo">
+          <span>${item.anno}</span>
+          <span>${item.km}</span>
+        </div>
+        <div class="qr">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=156x156&data=${encodeURIComponent(item.link)}" alt="QR Code">
+        </div>
+      </div>
+    `;
+    container.appendChild(slide);
+  });
+}
+
+function startSlideshow() {
+  const slides = document.querySelectorAll('.slide');
+  if (slides.length === 0) return;
+  slides[0].classList.add('active');
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }, SLIDE_DURATION);
+}
+</script>
+
+</body>
+</html>
