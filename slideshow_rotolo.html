@@ -1,115 +1,120 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Stock Rotolo Automobili - Live</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slideshow Auto - Rotolo</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fff;
+      font-family: sans-serif;
       overflow: hidden;
     }
     .slide {
-   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  padding: 20px;
-    }
-    .slide img.car {
-      width: 85vw;
-      height: 85vh;
-      object-fit: contain;
-
-    }
-    .info-bar {
       position: absolute;
-      bottom: 0;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+    .image-container {
+      max-width: 90%;
+      max-height: 60%;
+    }
+    .image-container img {
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.51);
-      padding: 20px;
-      box-sizing: border-box;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .info-bar h1 {
-      font-size: 2.5em;
-      color: #b30000;
+    .info {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .info h1 {
+      font-size: 3vw;
       margin: 0;
+      color: #cc0000;
     }
-    .info-bar p.price {
-      font-size: 2.2em;
-      color: #b30000;
-      font-weight: bold;
+    .info p {
+      font-size: 2vw;
       margin: 5px 0;
-    }
-    .info-bar p.details {
-      font-size: 1.4em;
       color: #333;
-      margin: 5px 0;
     }
-    .slide img.qr {
+    .qr {
       position: absolute;
       bottom: 20px;
       right: 20px;
-      width: 220px;
-      height: 220px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      background-color: white;
-      padding: 5px;
+    }
+    .qr img {
+      width: 120px;
+      height: 120px;
     }
   </style>
 </head>
 <body>
-  <div id="slides"></div>
 
-  <script>
-    const container = document.getElementById("slides");
-    let current = 0;
+<div id="slideshow"></div>
 
-    async function fetchSlides() {
-      try {
-        const response = await fetch("https://raw.githubusercontent.com/WilliamsRotolo/slideshow/main/stock_rotolo_annunci.json");
-        const data = await response.json();
+<script>
+const SLIDE_DURATION = 10000; // 10 secondi
 
-        for (const car of data) {
-          const slide = document.createElement("div");
-          slide.className = "slide";
-          slide.innerHTML = `
-            <img class="car" src="${car.image_url}" alt="${car.title}">
-            <div class="info-bar">
-              <h1>${car.title}</h1>
-              <p class="price">${car.price}</p>
-              <p class="details">${car.km} • ${car.year}</p>
-            </div>
-            <img class="qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(car.link)}" alt="QR Code">
-          `;
-          container.appendChild(slide);
-        }
+let data = [];
+let currentIndex = 0;
 
-        startSlideshow();
-      } catch (error) {
-        container.innerHTML = '<p style="color:red; font-size:1.5em; text-align:center; padding-top:2em;">Errore nel caricamento degli annunci.</p>';
-        console.error("Errore fetch JSON:", error);
-      }
-    }
+fetch('stock_rotolo_annunci.json')
+  .then(res => res.json())
+  .then(json => {
+    data = json;
+    createSlides();
+    startSlideshow();
+  });
 
-    function startSlideshow() {
-      const slides = document.querySelectorAll(".slide");
-      if (slides.length === 0) return;
-      slides[0].style.display = "block";
+function createSlides() {
+  const container = document.getElementById('slideshow');
+  data.forEach((item, index) => {
+    const slide = document.createElement('div');
+    slide.className = 'slide';
 
-      setInterval(() => {
-        slides[current].style.display = "none";
-        current = (current + 1) % slides.length;
-        slides[current].style.display = "block";
-      }, 10000);
-    }
+    slide.innerHTML = `
+      <div class="image-container">
+        <img src="${item.immagine}" alt="Auto">
+      </div>
+      <div class="info">
+        <h1>${item.titolo}</h1>
+        <p>💰 ${item.prezzo}</p>
+        <p>📅 ${item.anno} &nbsp;&nbsp; 🚗 ${item.km}</p>
+      </div>
+      <div class="qr">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(item.link)}" alt="QR Code">
+      </div>
+    `;
+    container.appendChild(slide);
+  });
+}
 
-    fetchSlides();
-  </script>
+function startSlideshow() {
+  const slides = document.querySelectorAll('.slide');
+  if (slides.length === 0) return;
+  slides[0].classList.add('active');
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('active');
+  }, SLIDE_DURATION);
+}
+</script>
+
 </body>
 </html>
