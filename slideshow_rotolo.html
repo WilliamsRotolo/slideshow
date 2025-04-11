@@ -11,6 +11,7 @@
       font-family: sans-serif;
       overflow: hidden;
     }
+
     .slide {
       position: absolute;
       top: 0; left: 0;
@@ -23,40 +24,66 @@
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
+
     .slide.active {
       opacity: 1;
       z-index: 1;
     }
+
     .image-container {
       max-width: 90%;
       max-height: 60%;
     }
+
     .image-container img {
       width: 100%;
       height: auto;
       border-radius: 20px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
-    .info {
-      text-align: center;
-      margin-top: 20px;
+
+    .info-box {
+      margin-top: 30px;
+      background-color: rgba(204, 0, 0, 0.85); /* rosso semitrasparente */
+      padding: 20px 40px;
+      border: 2px solid black;
+      outline: 2px solid white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
     }
-    .info h1 {
-      font-size: 3vw;
+
+    .info-box h1 {
+      font-size: 3.2vw;
       margin: 0;
-      color: #cc0000;
+      color: white;
+      font-weight: 900;
+      text-align: center;
     }
-    .info p {
-      font-size: 2.5vw;
-      margin: 5px 0;
-      color: #222;
+
+    .info-box .prezzo {
+      font-size: 3.5vw;
+      margin: 10px 0 5px;
       font-weight: bold;
+      color: white;
     }
+
+    .info-box .sottotitolo {
+      font-size: 2.3vw;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+    }
+
     .qr {
       position: absolute;
       bottom: 20px;
       right: 20px;
     }
+
     .qr img {
       width: 156px;
       height: 156px;
@@ -91,13 +118,16 @@ function createSlides() {
       <div class="image-container">
         <img src="${item.immagine}" alt="Auto">
       </div>
-      <div class="info">
+      <div class="info-box">
         <h1>${item.titolo}</h1>
-        <p>${item.prezzo}</p>
-        <p>${item.anno} &nbsp;&nbsp; ${item.km}</p>
-      </div>
-      <div class="qr">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=156x156&data=${encodeURIComponent(item.link)}" alt="QR Code">
+        <div class="prezzo">${item.prezzo}</div>
+        <div class="sottotitolo">
+          <span>${item.anno}</span>
+          <span>${item.km}</span>
+        </div>
+        <div class="qr">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=156x156&data=${encodeURIComponent(item.link)}" alt="QR Code">
+        </div>
       </div>
     `;
     container.appendChild(slide);
