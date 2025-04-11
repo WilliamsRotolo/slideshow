@@ -47,9 +47,10 @@
       color: #cc0000;
     }
     .info p {
-      font-size: 2vw;
+      font-size: 2.5vw;
       margin: 5px 0;
-      color: #333;
+      color: #222;
+      font-weight: bold;
     }
     .qr {
       position: absolute;
@@ -57,8 +58,8 @@
       right: 20px;
     }
     .qr img {
-      width: 120px;
-      height: 120px;
+      width: 156px;
+      height: 156px;
     }
   </style>
 </head>
@@ -92,11 +93,11 @@ function createSlides() {
       </div>
       <div class="info">
         <h1>${item.titolo}</h1>
-        <p>💰 ${item.prezzo}</p>
-        <p>📅 ${item.anno} &nbsp;&nbsp; 🚗 ${item.km}</p>
+        <p>${item.prezzo}</p>
+        <p>${item.anno} &nbsp;&nbsp; ${item.km}</p>
       </div>
       <div class="qr">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(item.link)}" alt="QR Code">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=156x156&data=${encodeURIComponent(item.link)}" alt="QR Code">
       </div>
     `;
     container.appendChild(slide);
