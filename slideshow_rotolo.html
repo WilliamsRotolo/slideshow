@@ -18,8 +18,9 @@
       width: 100vw;
       height: 100vh;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
+      justify-content: flex-start;
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
@@ -30,14 +31,15 @@
     }
 
     .image-container {
-      height: 100vh;
+      width: 100%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: flex-start;
+      padding-top: 20px;
     }
 
     .image-container img {
-      height: 100vh;
+      max-height: 80vh;
       width: auto;
       object-fit: contain;
     }
@@ -51,102 +53,3 @@
       padding: 20px 40px;
       box-shadow: 0 0 30px rgba(0,0,0,0.2);
       display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .info-box h1 {
-      font-size: 3.2vw;
-      margin: 0;
-      color: #cc0000;
-      font-weight: 900;
-      text-align: center;
-    }
-
-    .info-box .prezzo {
-      font-size: 3.8vw;
-      margin: 10px 0 5px;
-      font-weight: bold;
-      color: #000;
-    }
-
-    .info-box .sottotitolo {
-      font-size: 2.3vw;
-      font-weight: bold;
-      color: #333;
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-    }
-
-    .qr {
-      position: absolute;
-      bottom: 20px;
-      right: 30px;
-    }
-
-    .qr img {
-      width: 156px;
-      height: 156px;
-    }
-  </style>
-</head>
-<body>
-
-<div id="slideshow"></div>
-
-<script>
-const SLIDE_DURATION = 10000; // 10 secondi
-
-let data = [];
-let currentIndex = 0;
-
-fetch('stock_rotolo_annunci.json')
-  .then(res => res.json())
-  .then(json => {
-    data = json;
-    createSlides();
-    startSlideshow();
-  });
-
-function createSlides() {
-  const container = document.getElementById('slideshow');
-  data.forEach((item, index) => {
-    const slide = document.createElement('div');
-    slide.className = 'slide';
-
-    slide.innerHTML = `
-      <div class="image-container">
-        <img src="${item.immagine}" alt="Auto">
-      </div>
-      <div class="info-box">
-        <h1>${item.titolo}</h1>
-        <div class="prezzo">${item.prezzo}</div>
-        <div class="sottotitolo">
-          <span>${item.anno}</span>
-          <span>${item.km}</span>
-        </div>
-        <div class="qr">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=156x156&data=${encodeURIComponent(item.link)}" alt="QR Code">
-        </div>
-      </div>
-    `;
-    container.appendChild(slide);
-  });
-}
-
-function startSlideshow() {
-  const slides = document.querySelectorAll('.slide');
-  if (slides.length === 0) return;
-  slides[0].classList.add('active');
-
-  setInterval(() => {
-    slides[currentIndex].classList.remove('active');
-    currentIndex = (currentIndex + 1) % slides.length;
-    slides[currentIndex].classList.add('active');
-  }, SLIDE_DURATION);
-}
-</script>
-
-</body>
-</html>
