@@ -1,84 +1,102 @@
-
 import requests
 from bs4 import BeautifulSoup
 import json
-import subprocess
+import time
+import random
 
-# === PARTE 1: Estrazione annunci dal sito ===
-
-url = "https://www.rotoloauto.com/lista-veicoli/"
-print("🚀 Avvio scraping da:", url)
-
-try:
-    print("🔗 Invio richiesta HTTP...")
-    response = requests.get(url)
-    response.raise_for_status()
-    print("✅ Pagina caricata correttamente.")
-except Exception as e:
-    print(f"❌ Errore nella richiesta: {e}")
-    exit()
-
-soup = BeautifulSoup(response.text, 'html.parser')
-print("🔎 Cerco tutti i div con class 'ga-vehicles-list-item'...")
-annunci = soup.find_all('div', class_='ga-vehicles-list-item')
-print(f"📦 Trovati {len(annunci)} annunci.")
-
-if not annunci:
-    with open("debug_rotolo.html", "w", encoding="utf-8") as f:
-        f.write(response.text)
-    print("⚠️ Nessun annuncio trovato. HTML salvato in 'debug_rotolo.html'")
-    exit()
-
+base_url = "https://www.rotoloauto.com/lista-veicoli/"
+output_file = "stock_rotolo_annunci.json"
+offset = 0
+step = 20
+pagina = 1
 lista_annunci = []
 
-for idx, annuncio in enumerate(annunci, start=1):
-    try:
-        print(f"\n➡️ Elaboro annuncio {idx}...")
+print("🚗 Inizio scraping multi-pagina da RotoloAuto...\n")
 
-        titolo = annuncio.find("a", class_="ga-title").get_text(strip=True)
-        prezzo = annuncio.find("div", class_="ga-price").get_text(strip=True)
-        immagine = annuncio.find("img", class_="ga-main-image")["src"]
-        link = annuncio.find("a", class_="ga-title")["href"]
-        sottotitolo = annuncio.find("div", class_="ga-subtitle").get_text(strip=True)
+while True:
+    url = base_url if offset == 0 else f"{base_url}?offset={offset}"
+    print(f"📄 Pagina {pagina} - URL: {url}")
 
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    annunci_html = soup.find_all('div', class_='ga-vehicles-list-item')
+
+    if not annunci_html:
+        print("🛑 Nessun annuncio trovato, fine delle pagine.")
+        break
+
+    print(f"   ➕ Trovati {len(annunci_html)} annunci")
+
+    for annuncio in annunci_html:
         try:
-            anno, km = map(str.strip, sottotitolo.split("|"))
-        except:
+            titolo_tag = annuncio.find("a", class_="ga-title")
+            titolo = titolo_tag.get_text(strip=True) if titolo_tag else ""
+
+            prezzo_tag = annuncio.find("div", class_="ga-price")
+            prezzo = prezzo_tag.get_text(strip=True) if prezzo_tag else ""
+
+            link = titolo_tag["href"] if titolo_tag and titolo_tag.has_attr("href") else ""
+            link_completo = link if link.startswith("http") else f"https://www.rotoloauto.com{link}"
+
+            img_tag = annuncio.find("img", class_="ga-main-image")
+            immagine = img_tag["src"] if img_tag and img_tag.has_attr("src") else ""
+            immagine_completa = immagine if immagine.startswith("http") else f"https:{immagine}"
+
             anno, km = "", ""
+            info_list = annuncio.find("ul", class_="ga-info")
+            if info_list:
+                items = info_list.find_all("li")
+                if len(items) >= 6:
+                    prima_riga = items[0].get_text(strip=True)
+                    if "," in prima_riga:
+                        data = prima_riga.split(",")[1].strip()
+                        if "/" in data:
+                            mese, anno_parsato = data.split("/")
+                            anno = anno_parsato.strip()
+                    km = items[5].get_text(strip=True)
 
-        link_completo = link if link.startswith("http") else f"https://www.rotoloauto.com{link}"
-        immagine_completa = immagine if immagine.startswith("http") else f"https:{immagine}"
+            lista_annunci.append({
+                "titolo": titolo,
+                "prezzo": prezzo,
+                "anno": anno,
+                "km": km,
+                "link": link_completo,
+                "immagine": immagine_completa
+            })
 
-        lista_annunci.append({
-            "title": titolo,
-            "price": prezzo,
-            "year": anno,
-            "km": km,
-            "image_url": immagine_completa,
-            "link": link_completo
-        })
+        except Exception as e:
+            print(f"   ⚠️ Errore su un annuncio: {e}")
+            continue
 
-    except Exception as e:
-        print(f"❌ Errore durante l'annuncio {idx}: {e}")
+    offset += step
+    pagina += 1
+    time.sleep(1)  # Rispetto per il server
 
-# === PARTE 2: Salvataggio in JSON ===
+# === DEDUPLICAZIONE ===
+print("\n🧹 Avvio deduplicazione...")
 
-filename = "stock_rotolo_annunci.json"
-with open(filename, "w", encoding="utf-8") as f:
-    json.dump(lista_annunci, f, ensure_ascii=False, indent=2)
+visti = set()
+deduplicati = []
 
-print(f"\n✅ Salvati {len(lista_annunci)} annunci in '{filename}' ✅")
+for annuncio in lista_annunci:
+    chiave = (
+        annuncio.get("titolo", "").strip().lower(),
+        annuncio.get("prezzo", "").strip().lower(),
+        annuncio.get("anno", "").strip().lower(),
+        annuncio.get("km", "").strip().lower()
+    )
+    if chiave not in visti:
+        visti.add(chiave)
+        deduplicati.append(annuncio)
 
-# === PARTE 3: Push automatico su GitHub ===
+print(f"✅ Da {len(lista_annunci)} annunci totali → {len(deduplicati)} unici")
 
-def push_to_github():
-    print("📤 Faccio push su GitHub...")
-    try:
-        subprocess.run(["git", "add", filename], check=True)
-        subprocess.run(["git", "commit", "-m", "Aggiornamento automatico JSON"], check=True)
-        subprocess.run(["git", "push"], check=True)
-        print("✅ Push eseguito con successo.")
-    except subprocess.CalledProcessError as e:
-        print(f"❌ Errore nel push: {e}")
+# === MESCOLAMENTO ===
+random.shuffle(deduplicati)
+print("🔀 Annunci mescolati in ordine casuale.")
 
-push_to_github()
+# === SALVATAGGIO ===
+with open(output_file, "w", encoding="utf-8") as f:
+    json.dump(deduplicati, f, ensure_ascii=False, indent=2)
+
+print(f"\n💾 File salvato come: {output_file}")
