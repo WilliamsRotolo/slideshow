@@ -40,14 +40,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21720362_E_6754108e53e27.jpg"
   },
   {
-    "titolo": "BMW 520 d xDrive Touring Msport SENZA FINANZIAMENTO",
-    "prezzo": "32.250 Euro",
-    "anno": "2018",
-    "km": "99.700 Km",
-    "link": "https://www.rotoloauto.com/scheda-bmw-520-d-xdrive-touring-msport-senza-finanziamento/21313944/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21313944_E_673efaa9114d0.jpg"
-  },
-  {
     "titolo": "BMW 530 d xDrive 249CV Touring Msport",
     "prezzo": "29.900 Euro",
     "anno": "2019",
@@ -62,14 +54,6 @@
     "km": "137.200 Km",
     "link": "https://www.rotoloauto.com/scheda-chevrolet-spark-1-2-ls-gpl-eco-logic/22091879/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22091879_E_67d55cbc91d19.jpg"
-  },
-  {
-    "titolo": "CHEVROLET Spark 1.2 LS GPL Eco Logic",
-    "prezzo": "6.490 Euro",
-    "anno": "2010",
-    "km": "137.200 Km",
-    "link": "https://www.rotoloauto.com/scheda-chevrolet-spark-1-2-ls-gpl-eco-logic/20763455/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/20763455_E_673f7241b029e.jpg"
   },
   {
     "titolo": "CITROEN C3 Aircross PureTech 110 S&S Feel PREZZO REALE",
@@ -115,41 +99,9 @@
     "titolo": "FIAT 500 1.0 Hybrid Dolcevita SENZA FINANZIAMENTO",
     "prezzo": "15.400 Euro",
     "anno": "2024",
-    "km": "17.000 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita-senza-finanziamento/22145433/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145433_E_67e58e68b82a1.jpg"
-  },
-  {
-    "titolo": "FIAT 500 1.0 Hybrid Dolcevita SENZA FINANZIAMENTO",
-    "prezzo": "15.400 Euro",
-    "anno": "2024",
     "km": "18.132 Km",
     "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita-senza-finanziamento/22145431/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145431_E_67e58e5be4fea.jpg"
-  },
-  {
-    "titolo": "FIAT 500 1.0 Hybrid Dolcevita SENZA FINANZIAMENTO",
-    "prezzo": "15.400 Euro",
-    "anno": "2024",
-    "km": "18.132 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita-senza-finanziamento/22145428/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145428_E_67e58e57ae86b.jpg"
-  },
-  {
-    "titolo": "FIAT 500 1.0 Hybrid Dolcevita SENZA FINANZIAMENTO",
-    "prezzo": "15.400 Euro",
-    "anno": "2024",
-    "km": "18.132 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita-senza-finanziamento/22143057/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22143057_E_67e512ee3582d.jpg"
-  },
-  {
-    "titolo": "FIAT 500 1.0 Hybrid Dolcevita SENZA FINANZIAMENTO",
-    "prezzo": "15.400 Euro",
-    "anno": "2024",
-    "km": "17.000 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-500-1-0-hybrid-dolcevita-senza-finanziamento/22100087/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22100087_E_67d930e69c87b.jpg"
   },
   {
     "titolo": "FIAT 500L 1.4 T-Jet 120 CV GPL Lounge PREZZO REALE",
@@ -192,14 +144,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22153230_E_67e7b4e3b866a.jpg"
   },
   {
-    "titolo": "FIAT 500X 1.6 MultiJet 120 CV City Cross",
-    "prezzo": "19.900 Euro",
-    "anno": "2020",
-    "km": "26.637 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-500x-1-6-multijet-120-cv-city-cross/22153228/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22153228_E_67e7b4dc0867b.jpg"
-  },
-  {
     "titolo": "FIAT 500X 1.6 MultiJet 120 CV City Cross.",
     "prezzo": "19.900 Euro",
     "anno": "2020",
@@ -219,33 +163,9 @@
     "titolo": "FIAT New Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
     "prezzo": "14.500 Euro",
     "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22145436/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145436_E_67e58e766cb7c.jpg"
-  },
-  {
-    "titolo": "FIAT New Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22145435/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145435_E_67e58e7437e3e.jpg"
-  },
-  {
-    "titolo": "FIAT New Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
     "km": "3 Km",
     "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-1-0-firefly-ss-hybrid-senza-finanziamento/21912377/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21912377_E_67ae269a06040.jpg"
-  },
-  {
-    "titolo": "FIAT New Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-1-0-firefly-ss-hybrid-senza-finanziamento/21912369/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21912369_E_67bca55f41937.jpg"
   },
   {
     "titolo": "FIAT New Panda 1.0 Hybrid ADAS",
@@ -264,14 +184,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22157100_E_67ea6f67d6c1d.jpg"
   },
   {
-    "titolo": "FIAT New Panda Hybrid ADAS PROMO CAR SERENITY",
-    "prezzo": "11.990 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-hybrid-adas-promo-car-serenity/22145438/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145438_E_67e58e7edc2a0.jpg"
-  },
-  {
     "titolo": "FIAT New Panda Hybrid My25 SENZA FINANZIAMENTO",
     "prezzo": "14.900 Euro",
     "anno": "2024",
@@ -280,44 +192,12 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22091884_E_67d55ce8d4ea7.jpg"
   },
   {
-    "titolo": "FIAT New Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-hybrid-my25-senza-finanziamento/21917487/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21917487_E_67ae274f91feb.jpg"
-  },
-  {
-    "titolo": "FIAT New Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-hybrid-my25-senza-finanziamento/22145440/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145440_E_67e58e824b238.jpg"
-  },
-  {
-    "titolo": "FIAT New Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-new-panda-hybrid-my25-senza-finanziamento/21907220/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21907220_E_679a5d9423816.jpg"
-  },
-  {
     "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid",
     "prezzo": "9.890 Euro",
     "anno": "2025",
     "km": "Km non disponibile",
     "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid/21925084/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21925084_E_67ae27b6eb1b8.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid",
-    "prezzo": "9.890 Euro",
-    "anno": "2025",
-    "km": "Km non disponibile",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid/21925083/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21925083_E_67ae27efc7786.jpg"
   },
   {
     "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid ADAS PROMO CAR SERENITY",
@@ -336,92 +216,12 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22182187_E_67f0f4b160b46.jpg"
   },
   {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid PROMO CAR SERENITY",
-    "prezzo": "10.990 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-promo-car-serenity/22182185/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22182185_E_67f0f4a83a335.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid PROMO CAR SERENITY",
-    "prezzo": "10.990 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-promo-car-serenity/22157112/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22157112_E_67ea7010c9714.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid PROMO CAR SERENITY",
-    "prezzo": "10.990 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-promo-car-serenity/22145501/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145501_E_67e58efc20dc7.jpg"
-  },
-  {
     "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
     "prezzo": "14.500 Euro",
     "anno": "2024",
     "km": "3 Km",
     "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22145499/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145499_E_67e58efa6a15d.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22145444/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145444_E_67e58e911847a.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22145442/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145442_E_67e58e8c9a191.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22097114/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22097114_E_67d8537b360be.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22097112/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22097112_E_67d853796a4e6.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22097111/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22097111_E_67d853776b008.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/22096913/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22096913_E_67d849bc67151.jpg"
-  },
-  {
-    "titolo": "FIAT Panda 1.0 FireFly S&S Hybrid SENZA FINANZIAMENTO",
-    "prezzo": "14.500 Euro",
-    "anno": "2024",
-    "km": "3 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-1-0-firefly-ss-hybrid-senza-finanziamento/21912509/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21912509_E_67bcaa391c9f9.jpg"
   },
   {
     "titolo": "FIAT Panda 1.0 Hybrid Pandina PROMO CAR SERENITY",
@@ -454,30 +254,6 @@
     "km": "0 Km",
     "link": "https://www.rotoloauto.com/scheda-fiat-panda-hybrid-my25-senza-finanziamento/22182184/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22182184_E_67f0f4a29bb57.jpg"
-  },
-  {
-    "titolo": "FIAT Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-hybrid-my25-senza-finanziamento/22145495/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145495_E_67e58ef36d7b5.jpg"
-  },
-  {
-    "titolo": "FIAT Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-hybrid-my25-senza-finanziamento/22145489/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145489_E_67e58ef0849c3.jpg"
-  },
-  {
-    "titolo": "FIAT Panda Hybrid My25 SENZA FINANZIAMENTO",
-    "prezzo": "14.900 Euro",
-    "anno": "2024",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-fiat-panda-hybrid-my25-senza-finanziamento/21907210/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/21907210_E_67ae2a6944a2b.jpg"
   },
   {
     "titolo": "FIAT Panda Hybrid My25. SENZA FINANZIAMENTO",
@@ -520,28 +296,12 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22091873_E_67d55c75ba917.jpg"
   },
   {
-    "titolo": "FORD Focus 1.0 EcoBoost 100 CV Start&Stop",
-    "prezzo": "6.900 Euro",
-    "anno": "2014",
-    "km": "229.917 Km",
-    "link": "https://www.rotoloauto.com/scheda-ford-focus-1-0-ecoboost-100-cv-startstop/22089404/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22089404_E_67d466b612499.jpg"
-  },
-  {
     "titolo": "HYUNDAI i10 1.0 MPI Tech SENZA FINANZIAMENTO",
     "prezzo": "12.700 Euro",
     "anno": "2022",
     "km": "60.013 Km",
     "link": "https://www.rotoloauto.com/scheda-hyundai-i10-1-0-mpi-tech-senza-finanziamento/22091870/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22091870_E_67d55c412e067.jpg"
-  },
-  {
-    "titolo": "HYUNDAI i10 1.0 MPI Tech SENZA FINANZIAMENTO",
-    "prezzo": "12.700 Euro",
-    "anno": "2022",
-    "km": "60.013 Km",
-    "link": "https://www.rotoloauto.com/scheda-hyundai-i10-1-0-mpi-tech-senza-finanziamento/22047240/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22047240_E_67d40f0216a30.jpg"
   },
   {
     "titolo": "JAGUAR E-Pace 2.0D 150 CV SENZA FINANZIAMENTO",
@@ -616,14 +376,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22096897_E_67d848b5af2ce.jpg"
   },
   {
-    "titolo": "LANCIA Ypsilon 1.2 69 CV 5 porte GPL Ecochic Gold",
-    "prezzo": "7.450 Euro",
-    "anno": "2015",
-    "km": "185.575 Km",
-    "link": "https://www.rotoloauto.com/scheda-lancia-ypsilon-1-2-69-cv-5-porte-gpl-ecochic-gold/22052276/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22052276_E_67d84873104ef.jpg"
-  },
-  {
     "titolo": "LANCIA Ypsilon Hybrid e-DCT PROMO CAR SERENITY",
     "prezzo": "19.900 Euro",
     "anno": "",
@@ -648,22 +400,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145446_E_67e58e9cd1efa.jpg"
   },
   {
-    "titolo": "MG ZS Classic 1.5 Luxury SENZA FINANZIAMENTO",
-    "prezzo": "18.690 Euro",
-    "anno": "2025",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-mg-zs-classic-1-5-luxury-senza-finanziamento/22145445/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145445_E_67e58e9a9df12.jpg"
-  },
-  {
-    "titolo": "MG ZS Classic 1.5 Luxury SENZA FINANZIAMENTO",
-    "prezzo": "18.690 Euro",
-    "anno": "2025",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-mg-zs-classic-1-5-luxury-senza-finanziamento/22062132/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22062132_E_67cb2be5d88fa.jpg"
-  },
-  {
     "titolo": "OPEL Corsa 1.2 100 CV  Edition PREZZO SENZA NESSUN VINCOLO",
     "prezzo": "16.290 Euro",
     "anno": "2025",
@@ -680,14 +416,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22204734_E_67f8c19f54c2b.jpg"
   },
   {
-    "titolo": "OPEL Corsa 1.2 100 CV  Edition PROMO CAR SERENITY",
-    "prezzo": "13.900 Euro",
-    "anno": "2025",
-    "km": "1 Km",
-    "link": "https://www.rotoloauto.com/scheda-opel-corsa-1-2-100-cv-edition-promo-car-serenity/22204715/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22204715_E_67f8c11bdfb77.jpg"
-  },
-  {
     "titolo": "OPEL Corsa 1.2 100 CV Edition PROMO CAR SERENITY",
     "prezzo": "13.900 Euro",
     "anno": "2025",
@@ -696,28 +424,12 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145461_E_67e58ed3ebd57.jpg"
   },
   {
-    "titolo": "OPEL Corsa 1.2 100 CV Edition PROMO CAR SERENITY",
-    "prezzo": "13.900 Euro",
-    "anno": "2025",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-opel-corsa-1-2-100-cv-edition-promo-car-serenity/22145454/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145454_E_67e58ec3a6703.jpg"
-  },
-  {
     "titolo": "OPEL Corsa 1.2 100 CV Edition SENZA NESSUN VINCOLO",
     "prezzo": "17.590 Euro",
     "anno": "2025",
     "km": "0 Km",
     "link": "https://www.rotoloauto.com/scheda-opel-corsa-1-2-100-cv-edition-senza-nessun-vincolo/22145448/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145448_E_67e58ea607cc4.jpg"
-  },
-  {
-    "titolo": "OPEL Corsa 1.2 100 CV Edition SENZA NESSUN VINCOLO",
-    "prezzo": "17.590 Euro",
-    "anno": "2025",
-    "km": "0 Km",
-    "link": "https://www.rotoloauto.com/scheda-opel-corsa-1-2-100-cv-edition-senza-nessun-vincolo/22056706/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22056706_E_67c9d9a822379.jpg"
   },
   {
     "titolo": "PORSCHE Cayenne 3.0 Diesel Platinum Edition SENZA FINANZIAMENTO",
@@ -760,14 +472,6 @@
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22215482_E_67fd3f4de8030.jpg"
   },
   {
-    "titolo": "VOLKSWAGEN Golf 1.6 TDI 115 CV 5p. Business SENZA FINANZIAMENTO",
-    "prezzo": "14.300 Euro",
-    "anno": "2017",
-    "km": "127.000 Km",
-    "link": "https://www.rotoloauto.com/scheda-volkswagen-golf-1-6-tdi-115-cv-5p-business-senza-finanziamento/22145469/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22145469_E_iu9mlfgv8xchb.jpg"
-  },
-  {
     "titolo": "VOLKSWAGEN Tiguan 1.4 TSI Trend SENZA FINANZIAMENTO",
     "prezzo": "7.500 Euro",
     "anno": "2010",
@@ -782,14 +486,6 @@
     "km": "76.726 Km",
     "link": "https://www.rotoloauto.com/scheda-volkswagen-t-roc-1-0-tsi-life-prezzo-senza-nessun-vincolo/22205887/",
     "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22205887_E_67f8efb550410.jpg"
-  },
-  {
-    "titolo": "VOLKSWAGEN T-Roc 1.0 TSI Life PREZZO SENZA NESSUN VINCOLO",
-    "prezzo": "19.900 Euro",
-    "anno": "2022",
-    "km": "76.726 Km",
-    "link": "https://www.rotoloauto.com/scheda-volkswagen-t-roc-1-0-tsi-life-prezzo-senza-nessun-vincolo/22205863/",
-    "immagine": "https://graphics.gestionaleauto.com/gonline_graphics/22205863_E_67f8eedc7f721.jpg"
   },
   {
     "titolo": "VOLKSWAGEN T-Roc 1.0 TSI Life PROMO CAR SERENITY",
